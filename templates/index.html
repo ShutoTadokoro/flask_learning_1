@@ -1,7 +1,10 @@
-{% extends "base.html" %}
+{% extends "bootstrap/base.html" %}
+{% block title %}TOPページ{% endblock %}
 {% block content %}
+<div class="container">
     <h1>ブログアプリケーション</h1>
     <a href="/create" role="button">新規作成画面</a>
+    <a href="/logout" role="botton">ログアウト</a>
     {% for post in posts %}
     <article>
         <h2>{{ post.title }}</h2>
@@ -10,5 +13,6 @@
         <p>作成日時: {{ post.created_at }}</p>
         <p>{{ post.body }}</p>
     </article>
-    {% endfor %}    
+    {% endfor %}  
+</div>  
 {% endblock %}
