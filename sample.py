@@ -2,6 +2,7 @@ from operator import methodcaller
 from flask import Flask
 from flask import render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import UserMixin
 from datetime import datetime
 import pytz
 
